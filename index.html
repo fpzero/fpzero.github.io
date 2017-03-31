@@ -14,17 +14,31 @@
 <link href="http://www.superburgerchef.com.br/burgerchef/public/assets/css/vendor/product_slider.css" rel="stylesheet" type="text/css" /><link href="http://www.superburgerchef.com.br/burgerchef/public/assets/css/vendor/product_tabs.css" rel="stylesheet" type="text/css" /><link href="http://www.superburgerchef.com.br/burgerchef/public/assets/css/vendor/carousel.css" rel="stylesheet" type="text/css" /><link href="http://www.superburgerchef.com.br/burgerchef/public/assets/css/vendor/jquery.awesome-cropper.css" rel="stylesheet" type="text/css" /><link href="http://www.superburgerchef.com.br/burgerchef/public/assets/css/delivery_template.css" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
 <script type="text/javascript">var digitalData = {"page":{"protocol":"http:","hasjQuery":true,"referrer":"","pathname":"\/"},"site":{"name":"sDelivery","country":"BR","currency":"BRL","domain":"http:\/\/www.superburgerchef.com.br\/burgerchef\/","region":"pt-br","test":false,"cep_origem":"08577-859"},"tms":{"coreLocation":false,"customLocation":false,"digitalDataVersion":28122014.1}}</script><script src="http://www.superburgerchef.com.br/burgerchef/public/assets/js/enhanced.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<!-- GA Snippet -->
+  <script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-78060103-1', 'auto');
 
-  ga('create', 'UA-78060103-1', 'auto');
-  ga('send', 'pageview');
+// Replace the following lines with the plugins you want to use.
+ga('require', 'eventTracker');
+ga('require', 'impressionTracker', {
+  elements: ['cheeseburger', 'onion_rings', 'hot-dog', 'sundae', 'camarao']
+});
+ga('require', 'maxScrollTracker', {
+  maxScrollMetricIndex: 1,
+});
+ga('require', 'pageVisibilityTracker', {
+  visibleMetricIndex: 2,
+});
+ga('require', 'outboundLinkTracker');
+ga('require', 'urlChangeTracker');
 
+ga('send', 'pageview');
 </script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+<script async src="/autotrack.js"></script>
 </head>
 
 <body>
@@ -164,17 +178,17 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label>E-mail</label>
-                                <input type="text" class="form-control" name="username" value="">
+                                <input type="text" class="form-control" name="username" value="" ga-on="change" ga-event-category="Form tracking" ga-event-action="preencheu" ga-event-label="username">
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label>Senha</label>
-                                <input type="password" class="form-control" name="password" value="">
+                                <input type="password" class="form-control" name="password" value="" ga-on="change" ga-event-category="Form tracking" ga-event-action="preencheu" ga-event-label="password">
                             </div>
 
                         </div>
-                        <input type="submit" value="Login" id="button-login" class="btn btn-warning" style="margin-top: 25px;">
+                        <input type="submit" value="Login" id="button-login" class="btn btn-warning" style="margin-top: 25px;" ga-on="mousedown" ga-event-category="Login" ga-event-action="clicou">
                         </form>
                     
                     
@@ -197,17 +211,17 @@
 
         <ul id="product-tabs-0" class="nav nav-tabs">
             <li class="active">
-                <a href="#tab-destaque" data-toggle="tab">
+                <a href="#tab-destaque" data-toggle="tab" ga-on="mousedown" ga-event-category="Tabs" ga-event-action="Clique" ga-event-label="Destaque">
                     <span>Destaque</span>
                 </a>
             </li>
             <li>
-                <a href="#tab-mais-vendidos" data-toggle="tab">
+                <a href="#tab-mais-vendidos" data-toggle="tab" ga-on="mousedown" ga-event-category="Tabs" ga-event-action="Clique" ga-event-label="Mais Vendidos">
                     <span>Mais Venvidos</span>
                 </a>
             </li>
             <li>
-                <a href="#tab-novidades" data-toggle="tab">
+                <a href="#tab-novidades" data-toggle="tab" ga-on="mousedown" ga-event-category="Tabs" ga-event-action="Clique" ga-event-label="Novidades">
                     <span>Novidades</span>
                 </a>
             </li>
@@ -219,7 +233,7 @@
 
             <div class="box-product product-grid tab-pane fade in active" id="tab-destaque">
                 <!-- Begin box-product div -->
-                                    <div class="item">
+                                    <div class="item" id="suco_laranja">
                         <div class="image">
                             <a href="http://www.superburgerchef.com.br/burgerchef/produto/suco-de-laranja-400ml">
                                 <img src="http://www.superburgerchef.com.br/burgerchef/public/uploads/laranja.jpg" alt="Suco de Laranja 400ml" width="240" height="240">
@@ -246,7 +260,7 @@
                             </div>
                         </div>
                     </div>
-                                    <div class="item">
+                                    <div class="item" id="sundae">
                         <div class="image">
                             <a href="http://www.superburgerchef.com.br/burgerchef/produto/sundae">
                                 <img src="http://www.superburgerchef.com.br/burgerchef/public/uploads/data-menu-desserts-sundae-180x180[1].png" alt="Sundae" width="240" height="240">
@@ -273,7 +287,7 @@
                             </div>
                         </div>
                     </div>
-                                    <div class="item">
+                                    <div class="item" id="hot-dog">
                         <div class="image">
                             <a href="http://www.superburgerchef.com.br/burgerchef/produto/hot-dog">
                                 <img src="http://www.superburgerchef.com.br/burgerchef/public/uploads/data-menu-sandwiches-hotdog-vegetarian-240x240[1].jpg" alt="Hot Dog" width="240" height="240">
@@ -300,7 +314,7 @@
                             </div>
                         </div>
                     </div>
-                                    <div class="item">
+                                    <div class="item" id="cheeseburger">
                         <div class="image">
                             <a href="http://www.superburgerchef.com.br/burgerchef/produto/cheeseburger-150g">
                                 <img src="http://www.superburgerchef.com.br/burgerchef/public/uploads/data-menu-sandwiches-chizburger-240x240[1].jpg" alt="Cheeseburger 150g" width="240" height="240">
@@ -327,7 +341,7 @@
                             </div>
                         </div>
                     </div>
-                                    <div class="item">
+                                    <div class="item" id="onion_rings">
                         <div class="image">
                             <a href="http://www.superburgerchef.com.br/burgerchef/produto/onion-rings">
                                 <img src="http://www.superburgerchef.com.br/burgerchef/public/uploads/imagescale.jpg" alt="Onion Rings" width="240" height="240">
@@ -354,7 +368,7 @@
                             </div>
                         </div>
                     </div>
-                                    <div class="item">
+                                    <div class="item" id="coca-cola">
                         <div class="image">
                             <a href="http://www.superburgerchef.com.br/burgerchef/produto/coca-cola-2l">
                                 <img src="http://www.superburgerchef.com.br/burgerchef/public/uploads/cocacola2litro-900x900.jpg" alt="Coca Cola 2L" width="240" height="240">
@@ -381,7 +395,7 @@
                             </div>
                         </div>
                     </div>
-                                    <div class="item">
+                                    <div class="item" id="fritas">
                         <div class="image">
                             <a href="http://www.superburgerchef.com.br/burgerchef/produto/batata-frita-porcao-140g">
                                 <img src="http://www.superburgerchef.com.br/burgerchef/public/uploads/1.jpg" alt="Batata Frita - Porção 140g" width="240" height="240">
@@ -408,7 +422,7 @@
                             </div>
                         </div>
                     </div>
-                                    <div class="item">
+                                    <div class="item" id="camarao">
                         <div class="image">
                             <a href="http://www.superburgerchef.com.br/burgerchef/produto/poro-de-camaro-empanado">
                                 <img src="http://www.superburgerchef.com.br/burgerchef/public/uploads/e94b5f0a3ccd42cf97237894aa70133d.png" alt="Porção de Camarão Empanado" width="240" height="240">
@@ -435,7 +449,7 @@
                             </div>
                         </div>
                     </div>
-                                    <div class="item">
+                                    <div class="item" id="sorvete_uva">
                         <div class="image">
                             <a href="http://www.superburgerchef.com.br/burgerchef/produto/sorvete-de-uva">
                                 <img src="http://www.superburgerchef.com.br/burgerchef/public/uploads/sorvete_de_uva_cor_magenta.jpg" alt="Sorvete de Uva" width="240" height="240">
