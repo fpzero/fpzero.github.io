@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>help</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+.twocolumns {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+.threecolumns {
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 1100px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Adobe Analytics Launch Migration</h1>
+
+<p>This document have details about the Boden Adobe Analytics migration from GTM to Adobe Launch.</p>
+
+<h1 id="toc_1">The Basics</h1>
+
+<h2 id="toc_2">Page View Rules and Load Order</h2>
+
+<p>Adobe Analytics pageview requests are triggered by a <strong>Direct Call</strong> <code>dlReady</code> sent by GTM on <a href="https://tagmanager.google.com/#/container/accounts/1044779276/containers/6243354/workspaces/636/tags/399">this tag</a> and based on some dataLayer events.</p>
+
+<p>There are 8 rules on Adobe Launch that listen this Direct Call:</p>
+
+<ul>
+<li>One general rule that runs on every <code>dlReady</code> direct call and set all global variables and send the Adobe Analytics pageview beacon
+
+<ul>
+<li><a href="#all_pages_rule">Global | AA - All Pages: dlReady [GTM]</a></li>
+</ul></li>
+<li>Seven specific page rules that only runs on specific pages and set variables related to the page. These rules don&rsquo;t send the Adobe Analytics pageview beacon.
+
+<ul>
+<li><a href="#search_pages_rule">Global | AA - Search Page: dlReady [GTM]</a></li>
+<li><a href="#prodList_pages_rule">Global | AA - Product Listing Page: dlReady [GTM]</a></li>
+<li><a href="#prodDetail_pages_rule">Global | AA - Product Detail Page: dlReady [GTM]</a></li>
+<li><a href="#shoppingCart_pages_rule">Global | AA - Shopping Cart page: dlReady [GTM]</a></li>
+<li><a href="#checkout_pages_rule">Global | AA - Checkout pages: dlReady [GTM]</a></li>
+<li><a href="#order_pages_rule">Global | AA - Order confirmation: dlReady [GTM]</a></li>
+<li><a href="#error_pages_rule">Global | AA - Error Pages: dlReady [GTM]</a></li>
+</ul></li>
+</ul>
+
+<p>Every rule has a Order number that determines which rule runs first when an event shared between rules is triggered. Rules with lower numbers runs first.</p>
+
+<p>For the Adobe Analytics pageview rules, all the Specific pages rules has a smaller number than All Pages rules, forcing them to runs before the All Pages rule.</p>
+
+<p>When Adobe Launch receives the dlReady Direct Call this will happen:</p>
+
+<ol>
+<li>All rules with the dlReady event will have its conditions checked;</li>
+<li>If the site page meets the condition of any of the 6 Specific page rules, this rule will run and set the related Adobe variables, without sending Adobe request;</li>
+<li>After this or if the page didn&rsquo;t meet any rules condition, the All Pages rule will run. It will set global variables (e.g. pageName) and send the Adobe request;</li>
+</ol>
+
+<p><img src="https://i.imgur.com/rGUAxhO.png" alt="MacDown Screenshot"></p>
+
+<p>In this way, if the user is in the Search page, the <code>dlReady</code> direct call will trigger first the <em>Global | AA - Search Page: dlReady [GTM]</em> and then it will trigger the <em>Global | AA - All Pages: dlReady [GTM]</em>.</p>
+
+<p>I support all the original Markdown syntaxes. But I can do so much more! Various popular but non-standard syntaxes can be turned on/off from the <a href="#markdown-pane"><strong>Markdown</strong> preference pane</a>.</p>
+
+<h2 id="toc_3">Event Rules</h2>
+
+<p>Event rules will be triggered by <strong>Direct Calls</strong> created inside Adobe Launch or based on the page and browser events. It won&rsquo;t rely on Order number and it will always have the default value 50.</p>
+
+<ul>
+<li><a href="#addtobag">Global | AA - Product Detail Page: addToBag [GTM]</a></li>
+<li><a href="#productload">Global | AA - Product and Search pages: productLoad</a></li>
+<li><a href="#removefrombag">Global | AA - Shopping Cart Pages: removeFromBag [GTM]</a></li>
+</ul>
+
+<h1 id="toc_4">Extensions</h1>
+
+<p>Here is listed the Extensions used in the migration and relevant information about each Extension.</p>
+
+<h3 id="toc_5">Adobe Analytics</h3>
+
+<p>Extension used for Adobe Analytics calls. </p>
+
+<p>Only <strong>doPlugins variables</strong>, <strong>Library Management</strong>, <strong>General and Link tracking</strong> configurations are set in the extension.
+No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the most up-to-date value from dataLayer in the moment that the rule is triggered.</p>
+
+<p><strong><em>Library Management:</em></strong></p>
+
+<ul>
+<li>Development Report Suites</li>
+<li>Production Report Suites</li>
+<li>Make tracker globally accessible (for doPLugins use)</li>
+</ul>
+
+<p><strong><em>General:</em></strong></p>
+
+<ul>
+<li>Currency Code</li>
+<li>Tracking Server</li>
+</ul>
+
+<p><strong><em>Link tracking:</em></strong></p>
+
+<ul>
+<li>Track download links enabled</li>
+<li>Track outbound links enabled</li>
+<li>Never track configured with internal filters</li>
+</ul>
+
+<p><strong><em>Plugins installed:</em></strong></p>
+
+<ul>
+<li>getValOnce</li>
+<li>getPreviousValue</li>
+<li>Split</li>
+<li>Apl</li>
+<li>getPercentagePageViewed</li>
+<li>getTimeParting</li>
+<li>getNewRepeat</li>
+<li>pt</li>
+</ul>
+
+<p><strong><em>Variables set on doPlugins:</em></strong> eVar5, eVar9, prop15, prop21</p>
+
+<h3 id="toc_6">Experience Cloud ID Service</h3>
+
+<p>Extension used to enable Experience Cloud ID Service on the site
+<strong><em>Varibles set:</em></strong></p>
+
+<ul>
+<li>cookieDomain</li>
+<li>trackingServer</li>
+</ul>
+
+<h3 id="toc_7">Constant Data Element</h3>
+
+<p>Extension used to add the <em>Constant</em> option for <em>Data Elements</em></p>
+
+<h1 id="toc_8">Rules</h1>
+
+<h2 id="toc_9">Pageview Rules</h2>
+
+<h3 id="toc_10"><a name="all_pages_rule"></a>Global | AA - All Pages: dlReady [GTM]</h3>
+
+<p>Set global variables and events related to all pages and send the pageView beacon. This will always be the last <code>dlReady</code> rule to be triggered.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>Event:</em></td>
+<td>Direct Call: <code>dlReady</code></td>
+</tr>
+<tr>
+<td><em>Rule order:</em></td>
+<td>50</td>
+</tr>
+<tr>
+<td><em>Conditions:</em></td>
+<td><code>LiveDomain is true</code></td>
+</tr>
+<tr>
+<td><em>Actions:</em></td>
+<td><ol><li>Set Global Variables:</li><ul><li>eVar1, eVar2, eVar3, eVar8, eVar11, eVar20, eVar21, eVar25, eVar26, eVar30, eVar34, eVar36, eVar37, eVar38, eVar45, eVar47, eVar49, eVar64, eVar65, eVar66, eVar70, eVar90</li><li>prop1, prop2, prop4</li><li>event1, event13, event14</li><li>Page Name</li><li>Channel</li><li>Campaign</li></ul><li>Send Pageview beacon</li><li>Clear all Analytics variables</li><li>Make Direct Call &ldquo;loadProducts&rdquo; if the _satellite var &ldquo;loadProducts&rdquo; is true</li></ol></td>
+</tr>
+<tr>
+<td><em>Data Elements:</em></td>
+<td><ul class=threecolumns><li>CC: Breadcrumb</li><li>CC: Browse Category</li><li>CC: Channel</li><li>CC: Core<em>Non-Core</li><li>CC: country:language:currency</li><li>CC: isLiveDomain</li><li>CC: Library Build</li><li>CC: Page Name</li><li>CC: platform.locale</em>language</li><li>CC: platform.technology</li><li>CC: Screen Resolution</li><li>CC: Screen Sub Section1</li><li>CC: screen Sub Section2</li><li>CC: screen.type</li><li>CC: screen.url</li><li>CC: Scroll Percentage</li><li>CC: Site Speed</li><li>CC: user.age</li><li>CC: user.id</li><li>CC: user.status</li><li>CK: naviclick</li><li>CK: naviclickevar</li><li>LUT: Report Suite Name</li><li>QS: intid</li><li>loadProducts (\_satellite var)</li></ul></td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h3 id="toc_11"><a name="search_pages_rule"></a>Global | AA - Search Page: dlReady [GTM]</h3>
+
+<p>Set variables for Internal Search pages.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>Event:</em></td>
+<td>Direct Call: <code>dlReady</code></td>
+</tr>
+<tr>
+<td><em>Rule order:</em></td>
+<td>40</td>
+</tr>
+<tr>
+<td><em>Conditions:</em></td>
+<td><code>LiveDomain is true</code> <br /> <code>Is Search Page</code></td>
+</tr>
+<tr>
+<td><em>Actions:</em></td>
+<td><ol><li>Set Search Variables:</li><ul><li>eVar6, eVar7, eVar101, eVar200</li><li>Merchandising: eVar41</li><li>prop14</li><li>event3, event4, event6</li><li>Incrementor: event52</li><li>products</li></ul></ol></td>
+</tr>
+<tr>
+<td><em>Data Elements:</em></td>
+<td><ul class=twocolumns><li>CC: Adobe - Product Array - Products List</li><li>CC: Filter Usage</li><li>CC: isLiveDomain</li><li>CCC: Page Name</li><li>CC: productFinding.search.keyword</li><li>CC: productFinding.search.results</li><li>CT: product<em>cap</em>limit</li><li>CC: screen.type</li><li>loadProducts (\_satellite var)</li></ul></td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>Note:</p>
+
+<ul>
+<li>If the product list size is bigger than the value in &ldquo;CT: product_cap_limit&rdquo;, it sets a the _satellite var <code>loadProducts</code> as <code>true</code></li>
+<li>This rule sets the array dmpgGTMTools.variables.third_party.products inside Data Element <em>CC: Adobe - Product Array - Products List</em></li>
+<li>This rule pushes the event &ldquo;tp.load.auto.dataLayer.load&rdquo; into the dataLayer inside the <em>Adobe Custom Code</em></li>
+</ul>
+</blockquote>
+
+<hr>
+
+<h3 id="toc_12"><a name="prodList_pages_rule"></a>Global | AA - Product Listing Page: dlReady [GTM]</h3>
+
+<p>Set variables for Products Listing pages.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>Event:</em></td>
+<td>Direct Call: <code>dlReady</code></td>
+</tr>
+<tr>
+<td><em>Rule order:</em></td>
+<td>40</td>
+</tr>
+<tr>
+<td><em>Conditions:</em></td>
+<td><code>LiveDomain is true</code> <br /> <code>Is Product listing</code></td>
+</tr>
+<tr>
+<td><em>Actions:</em></td>
+<td><ol><li>Set Product List Variables:</li><ul><li>eVar101, eVar200</li><li>Merchandising: eVar41</li><li>Incrementor: event52</li><li>products</li></ul></ol></td>
+</tr>
+<tr>
+<td><em>Data Elements:</em></td>
+<td><ul class=twocolumns><li>CC: Adobe - Product Array - Products List</li><li>CC: isLiveDomain</li><li>CC: Page Name</li><li>CT: product<em>cap</em>limit</li><li>CC: screen.type</li><li>loadProducts (\_satellite var)</li></ul></td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>Note:</p>
+
+<ul>
+<li>If the product list size is bigger than the value in &ldquo;CT: product_cap_limit&rdquo;, it sets a the _satellite var <code>loadProducts</code> as <code>true</code></li>
+<li>This rule sets the array dmpgGTMTools.variables.third_party.products inside Data Element <em>CC: Adobe - Product Array - Products List</em></li>
+<li>This rule pushes the event &ldquo;tp.load.auto.dataLayer.load&rdquo; into the dataLayer inside the <em>Adobe Custom Code</em></li>
+</ul>
+</blockquote>
+
+<hr>
+
+<h3 id="toc_13"><a name="prodDetail_pages_rule"></a>Global | AA - Product Detail Page: dlReady [GTM]</h3>
+
+<p>Set variables for all Product Detail pages.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>Event:</em></td>
+<td>Direct Call: <code>dlReady</code></td>
+</tr>
+<tr>
+<td><em>Rule order:</em></td>
+<td>40</td>
+</tr>
+<tr>
+<td><em>Conditions:</em></td>
+<td><code>LiveDomain is true</code> <br /> <code>Is Product Detail</code></td>
+</tr>
+<tr>
+<td><em>Actions:</em></td>
+<td><ol><li>Set Product Details Variables:</li><ul><li>eVar12, eVar101</li><li>Merchandising: eVar41, eVar43, eVar53, eVar54</li><li>prodView, event10</li><li>Incrementor: event45, event54</li><li>products</li></ul></ol></td>
+</tr>
+<tr>
+<td><em>Data Elements:</em></td>
+<td><ul class=twocolumns><li>CC: Adobe - Product Array - Product Detail</li><li>CC: Finding Method</li><li>CC: isLiveDomain</li><li>CC: screen.type</li></ul></td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>Note:</p>
+
+<ul>
+<li>This rule sets the array dmpgGTMTools.variables.third_party.products inside Data Element <em>CC: Adobe - Product Array - Product Detail</em></li>
+<li>This rule pushes the event &ldquo;tp.load.auto.dataLayer.load&rdquo; into the dataLayer inside the <em>Adobe Custom Code</em></li>
+</ul>
+</blockquote>
+
+<hr>
+
+<h3 id="toc_14"><a name="shoppingCart_pages_rule"></a>Global | AA - Shopping Cart page: dlReady [GTM]</h3>
+
+<p>Set variables for the Shopping Cart page.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>Event:</em></td>
+<td>Direct Call: <code>dlReady</code></td>
+</tr>
+<tr>
+<td><em>Rule order:</em></td>
+<td>40</td>
+</tr>
+<tr>
+<td><em>Conditions:</em></td>
+<td><code>LiveDomain is true</code> <br /> <code>Is ShoppingBag</code></td>
+</tr>
+<tr>
+<td><em>Actions:</em></td>
+<td><ol><li>Set Shopping Cart Variables:</li><ul><li>Merchandising: eVar41, eVar42, eVar43</li><li>scView</li><li>products</li></ul></ol></td>
+</tr>
+<tr>
+<td><em>Data Elements:</em></td>
+<td><ul class=twocolumns><li>CC: Adobe - Product String - Checkout</li><li>CC: isLiveDomain</li><li>CC: screen.type</li></ul></td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>Note:</p>
+
+<ul>
+<li>If a product is duplicated in the shopping cart (same styleCode and variant name), the <code>Products</code> varaible will have one product with quantity and price updated instead of a new product for each duplicate.</li>
+<li>This rule sets the array dmpgGTMTools.variables.third_party.products inside Data Element <em>CC: Adobe - Product String - Checkout</em></li>
+<li>This rule pushes the event &ldquo;tp.load.auto.dataLayer.load&rdquo; into the dataLayer inside the <em>Adobe Custom Code</em></li>
+</ul>
+</blockquote>
+
+<hr>
+
+<h3 id="toc_15"><a name="checkout_pages_rule"></a>Global | AA - Checkout pages: dlReady [GTM]</h3>
+
+<p>Set variables for the Checkout steps page.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>Event:</em></td>
+<td>Direct Call: <code>dlReady</code></td>
+</tr>
+<tr>
+<td><em>Rule order:</em></td>
+<td>40</td>
+</tr>
+<tr>
+<td><em>Conditions:</em></td>
+<td><code>LiveDomain is true</code> <br /> <code>Is Checkout</code> <br /> <code>Page Name matches contact|billing|payment</code></td>
+</tr>
+<tr>
+<td><em>Actions:</em></td>
+<td><ol><li>Set Checkout Variables:</li><ul><li>Merchandising: eVar41, eVar42, eVar43</li><li>scCheckout</li><li>products</li></ul></ol></td>
+</tr>
+<tr>
+<td><em>Data Elements:</em></td>
+<td><ul class=twocolumns><li>CC: Adobe - Product String - Checkout</li><li>CC: isLiveDomain</li><li>CC: Page Name</li><li>CC: screen.type</li><li>scCheckouDone (\_satellite var)</li></ul></td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>Note:</p>
+
+<ul>
+<li>If a product is duplicated in the shopping cart (same styleCode and variant name), the <code>Products</code> varaible will have one product with quantity and price updated instead of a new product for each duplicate.</li>
+<li>The <em>scCheckout</em> event is sent only in the Payment step and only once in the Checkout flow. If the user arriver in the payment step and goes back to some step, the event won&rsquo;t be sent again in the payment step.</li>
+<li>This rule sets the array dmpgGTMTools.variables.third_party.products inside Data Element <em>CC: Adobe - Product String - Checkout</em></li>
+<li>This rule pushes the event &ldquo;tp.load.auto.dataLayer.load&rdquo; into the dataLayer inside the <em>Adobe Custom Code</em></li>
+</ul>
+</blockquote>
+
+<hr>
+
+<h3 id="toc_16"><a name="order_pages_rule"></a>Global | AA - Order confirmation: dlReady [GTM]</h3>
+
+<p>Set variables for the Order Confirmation page.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>Event:</em></td>
+<td>Direct Call: <code>dlReady</code></td>
+</tr>
+<tr>
+<td><em>Rule order:</em></td>
+<td>40</td>
+</tr>
+<tr>
+<td><em>Conditions:</em></td>
+<td><code>LiveDomain is true</code> <br /> <code>transaction.id is not undefined</code> <br /> <code>Is Order Confirmation</code></td>
+</tr>
+<tr>
+<td><em>Actions:</em></td>
+<td><ol><li>Set Order Confirmations Variables:</li><ul><li>eVar13, eVar15, eVar17, eVar18, eVar50</li><li>Merchandising: eVar41, eVar42, eVar43</li><li>purchase</li><li>Incrementor: event44, event45, event46, event47, event48,event49,event50</li><li>products</li></ul></ol></td>
+</tr>
+<tr>
+<td><em>Data Elements:</em></td>
+<td><ul class=twocolumns><li>CC: Adobe - Product String - Transaction</li><li>CC: isLiveDomain</li><li>CC: screen.type</li><li>CC: transaction.id</li><li>CC: Transaction - Shipping Methods - Pipe-Separated</li><li>CC: Transaction - Payment Methods - Pipe-Separated</li><li>SS: Promo Code</li></ul></td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>Note:</p>
+
+<ul>
+<li>If a product is duplicated in the shopping cart (same styleCode and variant name), the <code>Products</code> varaible will have one product with quantity and price updated instead of a new product for each duplicate.</li>
+<li>The <em>scCheckout</em> event is sent only in the Payment step and only once in the Checkout flow. If the user arriver in the payment step and goes back to some step, the event won&rsquo;t be sent again in the payment step.</li>
+<li>This rule sets the array dmpgGTMTools.variables.third_party.products inside Data Element <em>CC: Adobe - Product String - Checkout</em></li>
+<li>This rule pushes the event &ldquo;tp.load.auto.dataLayer.load&rdquo; into the dataLayer inside the <em>Adobe Custom Code</em></li>
+</ul>
+</blockquote>
+
+<hr>
+
+<h3 id="toc_17"><a name="error_pages_rule"></a>Global | AA - Error Pages: dlReady [GTM]</h3>
+
+<p>Set variables for the Error pages.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>Event:</em></td>
+<td>Direct Call: <code>dlReady</code></td>
+</tr>
+<tr>
+<td><em>Rule order:</em></td>
+<td>40</td>
+</tr>
+<tr>
+<td><em>Conditions:</em></td>
+<td><code>LiveDomain is true</code> <br /> <code>404 Page</code></td>
+</tr>
+<tr>
+<td><em>Actions:</em></td>
+<td><ol><li>Set Error Variables:</li><ul><li>event27</li></ul></ol></td>
+</tr>
+<tr>
+<td><em>Data Elements:</em></td>
+<td><ul class=twocolumns><li>PI: Page Title</li></ul></td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2 id="toc_18">Link Tracking Rules</h2>
+
+<h3 id="toc_19"><a name="addtobag"></a>Global | AA - Product Detail Page: addToBag [GTM]</h3>
+
+<p>Set Add To Cart variable and send Link Track Event.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>Event:</em></td>
+<td>Direct Call: <code>addToBag</code></td>
+</tr>
+<tr>
+<td><em>Rule order:</em></td>
+<td>50</td>
+</tr>
+<tr>
+<td><em>Conditions:</em></td>
+<td><code>LiveDomain is true</code> <br /> <code>Is Product Detail</code></td>
+</tr>
+<tr>
+<td><em>Actions:</em></td>
+<td><ol><li>Clear all Analytics variables</li><li>Set Add to Cart Variables:</li><ul><li>Page Name</li><li>Channel</li><li>eVar48, eVar102</li><li>Merchandising: eVar41, eVar42, eVar55, eVar56, eVar57, eVar58, eVar59, eVar60, eVar61 eVar102</li><li>scAdd, scOpen</ul><li>Send Link Tracking beacon</ol></td>
+</tr>
+<tr>
+<td><em>Data Elements:</em></td>
+<td><ul class=twocolumns><li>CC: Channel</li><li>CC: element.name (Cart Events)</li><li>CC: isLiveDomain</li><li>CC: Page Name</li><li>CC: screen.hierarchy</li><li>CC: screen.type</li><li>CC: shoppingBag.lines</li><li>CC: shoppingBag_lines (Cart Events)</li><li>FUNC: getProducts</li><li>FUNC: priceFormatted</li></ul></td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h3 id="toc_20"><a name="removefrombag"></a>Global | AA - Shopping Cart Pages: removeFromBag [GTM]</h3>
+
+<p>Set Add To Cart variable and send Link Track Event.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>Event:</em></td>
+<td>Direct Call: <code>removeFromBag</code></td>
+</tr>
+<tr>
+<td><em>Rule order:</em></td>
+<td>50</td>
+</tr>
+<tr>
+<td><em>Conditions:</em></td>
+<td><code>LiveDomain is true</code> <br /> <code>Is Shopping Cart</code></td>
+</tr>
+<tr>
+<td><em>Actions:</em></td>
+<td><ol><li>Clear all Analytics variables</li><li>Set Remove from Cart Variables:</li><ul><li>Page Name</li><li>Channel</li><li>Merchandising: eVar43</li><li>scRemove</ul><li>Send Link Tracking beacon</li></ol></td>
+</tr>
+<tr>
+<td><em>Data Elements:</em></td>
+<td><ul class=twocolumns><li>CC: Channel</li><li>CC: isLiveDomain</li><li>CC: Page Name</li><li>CC: product (Cart Events)</li><li>CC: screen.type</li><li>FUNC: priceFormatted</li></ul></td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h3 id="toc_21"><a name="productLoad"></a>Global | AA - Product and Search pages: productLoad</h3>
+
+<p>Set Add To Cart variable and send Link Track Event.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>Event:</em></td>
+<td>Direct Call: <code>loadProducts</code></td>
+</tr>
+<tr>
+<td><em>Rule order:</em></td>
+<td>50</td>
+</tr>
+<tr>
+<td><em>Conditions:</em></td>
+<td><code>LiveDomain is true</code> <br /> <code>Is Shopping Cart</code></td>
+</tr>
+<tr>
+<td><em>Actions:</em></td>
+<td><ol><li>eVar200</li><li>Merchandising: eVar41</li><li>Incrementor: event52</li><li>products</li></ol></td>
+</tr>
+<tr>
+<td><em>Data Elements:</em></td>
+<td><ul class=twocolumns><li>CC: Adobe - Product Array - Products List</li><li>CC: Channel</li><li>CC: Page Name</li><li>CT: product_cap_limit</li><li>FUNC: getProducts</li><li>prodArray (satellite var)</li><li>prodStart (satellite var)</li></ul></td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2 id="toc_22">Data Elements</h2>
+
+<p>This is the list of Data Elements used in the migration.
+For each variable is show its name, expected value, default value if expected value is not found, if the Data Element already existed or if it was created for the migration and Rules and other Data Elements dependencies.</p>
+
+<table>
+<thead>
+<tr>
+<th>Data Element</th>
+<th>Expeted value</th>
+<th>Default value</th>
+<th>isNew?</th>
+<th>Dependencies</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>CC: Adobe - Product Array - Product Detail</td>
+<td>Adobe product strings&#39; array with ev45, ev54, v41, v43, v53 and v54 <code>Arr</code></td>
+<td>[] <code>Arr</code></td>
+<td>Yes</td>
+<td>CC: assets.products<br />FUNC: getProducts</td>
+</tr>
+<tr>
+<td>CC: Adobe - Product Array - Products List</td>
+<td>Adobe product strings&#39; array with ev52 and v41 <code>Arr</code></td>
+<td>[] <code>Arr</code></td>
+<td>Yes</td>
+<td>CC: assets.products<br />FUNC: getProducts</td>
+</tr>
+<tr>
+<td>CC: Adobe - Product String - Checkout</td>
+<td>Adobe product string with v41, v42 and v43 <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>CC: shoppingBag<br />FUNC: getProducts<br />FUNC: joinObject<br />FUNC: priceFormat</td>
+</tr>
+<tr>
+<td>CC: Adobe - Product String - Transaction</td>
+<td>Adobe product string ev44-ev50, v41, v42 and v43 <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>CC: transaction.shoppingBag<br />FUNC: getProducts<br />FUNC: joinObject<br />FUNC: priceFormat</td>
+</tr>
+<tr>
+<td>CC: assets.products</td>
+<td>dataLayer assets.products <code>Arr</code></td>
+<td>&ldquo;undefined&rdquo; <code>Str</code></td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: Breadcrumb</td>
+<td>Page Browse category <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>CC: screen.type<br / >CC: screen.hierarchy<br />CC: Page Name</td>
+</tr>
+<tr>
+<td>CC: Browse Category</td>
+<td>Page Breadcrumb value <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: Channel</td>
+<td>Channel value <code>Str</code></td>
+<td>&ldquo;Other&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>CC: screen.hierarchy</td>
+</tr>
+<tr>
+<td>CC: Cookie Domain</td>
+<td>Page domain with no subdomain <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: Cookie Domain Periods</td>
+<td>Number os periods in domain <code>Num</code></td>
+<td>2 <code>Num</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: Core_Non-Core</td>
+<td>&ldquo;Core&rdquo; or &ldquo;Non-Core&rdquo; <code>Str</code></td>
+<td>&ldquo;Core&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: country:language:currency</td>
+<td>country:language:currency <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>CC: platform.locale<em>country<br / >CC: platform.locale</em>language<br />CC: platform.locale_currency</td>
+</tr>
+<tr>
+<td>CC: element.name (Cart Event)</td>
+<td>dataLayer element.name <code>Str</code></td>
+<td>&ldquo;undefined&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: Filter Usage</td>
+<td>filters used in page in format type:name:position join by &ldquo;,&rdquo;  <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>CC: productFinding.search.filters<br />CC: productFinding.filters</td>
+</tr>
+<tr>
+<td>CC: Finding Method</td>
+<td>Product finding method value <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>QS: intid<br / >CC: Browse Category<br />CC: Cookie domain</td>
+</tr>
+<tr>
+<td>CC: Internal Filters</td>
+<td>List of internal filters <code>Str</code></td>
+<td>List of internal filters <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: isLiveDomain</td>
+<td>true or false <code>Bool</code></td>
+<td>false <code>Bool</code></td>
+<td>Yes</td>
+<td>CC: platform.environment<br />LUT: Live Domains</td>
+</tr>
+<tr>
+<td>CC: Library Build</td>
+<td>buildEnvironment:buildData <code>Str</code></td>
+<td>&ldquo;undefined&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: Page Name</td>
+<td>Page Name value <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>CC: screen.hierarchy</td>
+</tr>
+<tr>
+<td>CC: platform.environment</td>
+<td>dataLayer platform.environment <code>Str</code></td>
+<td>&ldquo;undefined&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: platform.locale_currency</td>
+<td>dataLayer platform.locale_currency <code>Str</code></td>
+<td>&ldquo;undefined&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: platform.locale_country</td>
+<td>dataLayer platform.locale_country <code>Str</code></td>
+<td>&ldquo;undefined&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: platform.locale_language</td>
+<td>dataLayer platform.locale_language <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: platform.technology</td>
+<td>dataLayer platform.technology <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: Platform Region</td>
+<td>&ldquo;at&rdquo; / &ldquo;au&rdquo; / &ldquo;de&rdquo; / &ldquo;eu&rdquo; / &ldquo;fr&rdquo; / &ldquo;gb&rdquo; / &ldquo;us&rdquo; <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: product (Cart Events)</td>
+<td>dataLayer product <code>Obj</code></td>
+<td>&ldquo;undefined&rdquo; <code>Str</code></td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: productFinding.filters</td>
+<td>dataLayer (product_finding|productFinding).filters <code>Arr</code></td>
+<td>&ldquo;undefined&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: productFinding.search.filters</td>
+<td>dataLayer (product_finding|productFinding).search.filters <code>Arr</code></td>
+<td>&ldquo;undefined&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: productFinding.search.keyword</td>
+<td>dataLayer (product_finding|productFinding).search.keyword <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: productFinding.search.results</td>
+<td>dataLayer (product_finding|productFinding).search.results <code>Num</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: RSID</td>
+<td>Report Suite ID according the domain <code>Str</code></td>
+<td>&ldquo;jpbodendevgtmp1&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>CC: Platform Region</td>
+</tr>
+<tr>
+<td>CC: screen.hierarchy</td>
+<td>dataLayer screen.hierarchy <code>Arr</code></td>
+<td>&ldquo;undefined&rdquo; <code>Str</code></td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: Screen Resolution</td>
+<td>widthxheight <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: Screen Sub Section1</td>
+<td>first valeu of CC: screen.hierarchy <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>CC: screen.hierarchy</td>
+</tr>
+<tr>
+<td>CC: Screen Sub Section2</td>
+<td>second valeu of CC: screen.hierarchy <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>CC: screen.hierarchy</td>
+</tr>
+<tr>
+<td>CC: Screen Resolution</td>
+<td>widthxheight <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: screen.type</td>
+<td>dataLayer screen.type <code>Str</code></td>
+<td>&ldquo;undefined&rdquo; <code>Str</code></td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: screen.url</td>
+<td>dataLayer screen.url <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: Scroll Percentage</td>
+<td>value of cookie pageScroll <code>Str</code></td>
+<td>&ldquo;0%&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: Site Speed</td>
+<td>time calculation of page load <code>Num</code></td>
+<td><code>undefined</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: shoppingBag</td>
+<td>dataLayer shoppingBag <code>Obj</code></td>
+<td>&ldquo;undefined&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: shoppingBag.lines</td>
+<td>dataLayer shoppingBag.lines <code>Arr</code></td>
+<td>&ldquo;undefined&rdquo; <code>Str</code></td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: shoppingBag_lines (Cart Events)</td>
+<td>dataLayer shoppingBag_lines <code>Arr</code></td>
+<td>&ldquo;undefined&rdquo; <code>Str</code></td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: Transaction - Shipping Methods - Pipe-Separated</td>
+<td>Shipping methods for Transaction <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>CC: transaction.payments</td>
+</tr>
+<tr>
+<td>CC: Transaction - Payment Methods - Pipe-Separated</td>
+<td>Payment methods for Transaction <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>CC: transaction.shoppingBag.shipping.lines</td>
+</tr>
+<tr>
+<td>CC: transaction.id</td>
+<td>dataLayer transaction.id <code>Str</code></td>
+<td>&ldquo;undefined&rdquo; <code>Str</code></td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: transaction.payments</td>
+<td>dataLayer transaction.payments <code>Arr</code></td>
+<td>&ldquo;undefined&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: transaction.shoppingBag</td>
+<td>dataLayer transaction.shoppingBag <code>Obj</code></td>
+<td>&ldquo;undefined&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: transaction.shoppingBag.shipping.lines</td>
+<td>dataLayer transaction.shoppingBag.shipping.lines <code>Arr</code></td>
+<td>&ldquo;undefined&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: user.age</td>
+<td>dataLayer user.age <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: user.id</td>
+<td>dataLayer user.id <code>Str</code></td>
+<td>&ldquo;undefined&rdquo; <code>Str</code></td>
+<td>No</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CC: user.status</td>
+<td>dataLayer user.status <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CK: naviclick</td>
+<td>value of cookie naviclick <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CK: naviclickevar</td>
+<td>value of cookie naviclickevar <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CK: naviclickevar</td>
+<td>value of cookie naviclickevar <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CT: product_cap_limit</td>
+<td>limit of products to be sent in a request <code>Str</code></td>
+<td><code>Constant</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CT: trackingServer</td>
+<td>trackingServer used by Adobe <code>Str</code></td>
+<td><code>Constant</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>FUNC: getProducts</td>
+<td>Fuction to test Object and return it or an default format <code>function</code></td>
+<td>-</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>FUNC: joinObject</td>
+<td>Function to join values of objects <code>function</code></td>
+<td>-</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>FUNC: priceFormat</td>
+<td>Function to format price <code>function</code></td>
+<td>-</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LUT: Live Domains</td>
+<td>true or false <code>Bool</code></td>
+<td>false <code>Bool</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>LUT: Report Suite Name</td>
+<td>Report Suite name <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>CC: RSID</td>
+</tr>
+<tr>
+<td>PI: Page Title</td>
+<td>Page Title value <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>QS: intid</td>
+<td>Query Parameter intid value <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>SS: Promo Code</td>
+<td>Session Storage value latestPromo <code>Str</code></td>
+<td>&ldquo;&rdquo; <code>Str</code></td>
+<td>No</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+</body>
+
+</html>
