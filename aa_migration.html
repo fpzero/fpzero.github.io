@@ -387,8 +387,6 @@ kbd {
 
 <p>In this way, if the user is in the Search page, the <code>dlReady</code> direct call will trigger first the <em>Global | AA - Search Page: dlReady [GTM]</em> and then it will trigger the <em>Global | AA - All Pages: dlReady [GTM]</em>.</p>
 
-<p>I support all the original Markdown syntaxes. But I can do so much more! Various popular but non-standard syntaxes can be turned on/off from the <a href="#markdown-pane"><strong>Markdown</strong> preference pane</a>.</p>
-
 <h2 id="toc_3">Event Rules</h2>
 
 <p>Event rules will be triggered by <strong>Direct Calls</strong> created inside Adobe Launch or based on the page and browser events. It won&rsquo;t rely on Order number and it will always have the default value 50.</p>
@@ -397,6 +395,10 @@ kbd {
 <li><a href="#addtobag">Global | AA - Product Detail Page: addToBag [GTM]</a></li>
 <li><a href="#productload">Global | AA - Product and Search pages: productLoad</a></li>
 <li><a href="#removefrombag">Global | AA - Shopping Cart Pages: removeFromBag [GTM]</a></li>
+<li><a href="#cartpopup">Global | AA - All Pages : Cart Pop-Up</a></li>
+<li><a href="#continueshopping">Global | Global | AA - All Pages: Continue Shopping</a></li>
+<li><a href="#cartpopup">Global | AA - All Pages : Cart Pop-Up</a></li>
+<li><a href="#colourfilter">Global | AA - Product Detail Page: Colour Filter</a></li>
 </ul>
 
 <h1 id="toc_4">Extensions</h1>
@@ -410,53 +412,57 @@ kbd {
 <p>Only <strong>doPlugins variables</strong>, <strong>Library Management</strong>, <strong>General and Link tracking</strong> configurations are set in the extension.
 No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the most up-to-date value from dataLayer in the moment that the rule is triggered.</p>
 
-<p><strong><em>Library Management:</em></strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
 
-<ul>
-<li>Development Report Suites</li>
-<li>Production Report Suites</li>
-<li>Make tracker globally accessible (for doPLugins use)</li>
-</ul>
-
-<p><strong><em>General:</em></strong></p>
-
-<ul>
-<li>Currency Code</li>
-<li>Tracking Server</li>
-</ul>
-
-<p><strong><em>Link tracking:</em></strong></p>
-
-<ul>
-<li>Track download links enabled</li>
-<li>Track outbound links enabled</li>
-<li>Never track configured with internal filters</li>
-</ul>
-
-<p><strong><em>Plugins installed:</em></strong></p>
-
-<ul>
-<li>getValOnce</li>
-<li>getPreviousValue</li>
-<li>Split</li>
-<li>Apl</li>
-<li>getPercentagePageViewed</li>
-<li>getTimeParting</li>
-<li>getNewRepeat</li>
-<li>pt</li>
-</ul>
-
-<p><strong><em>Variables set on doPlugins:</em></strong> eVar5, eVar9, prop15, prop21</p>
+<tbody>
+<tr>
+<td><strong><em>Library Management:</em></strong></td>
+<td><ul><li>Development Report Suites</li><li>Production Report Suites</li><li>Make tracker globally accessible (for doPLugins use)</li></ul></td>
+</tr>
+<tr>
+<td><strong><em>General:</em></strong></td>
+<td><ul><li>Tracking Server</li></ul></td>
+</tr>
+<tr>
+<td><strong><em>Link tracking:</em></strong></td>
+<td><ul><li>Track download links enabled</li><li>Track outbound links enabled</li><li>Never track configured with CC: Internal Filters</li></ul></td>
+</tr>
+<tr>
+<td><strong><em>Plugins installed:</em></strong></td>
+<td><ul><li>getValOnce</li><li>getPreviousValue</li><li>split</li><li>apl</li><li>getPercentagePageViewed</li><li>getTimeParting</li><li>getNewRepeat</li><li>pt</li></ul></td>
+</tr>
+<tr>
+<td><strong><em>Variables set on doPlugins:</em></strong></td>
+<td><ul><li>eVar5</li><li>eVar9</li><li>prop15</li><li>prop21</li></ul></td>
+</tr>
+</tbody>
+</table>
 
 <h3 id="toc_6">Experience Cloud ID Service</h3>
 
-<p>Extension used to enable Experience Cloud ID Service on the site
-<strong><em>Varibles set:</em></strong></p>
+<p>Extension used to enable Experience Cloud ID Service on the site</p>
 
-<ul>
-<li>cookieDomain</li>
-<li>trackingServer</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong><em>Varibles set:</em></strong></td>
+<td><ul><li>cookieDomain</li><li>trackingServer</li></ul></td>
+</tr>
+</tbody>
+</table>
 
 <h3 id="toc_7">Constant Data Element</h3>
 
@@ -493,7 +499,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 </tr>
 <tr>
 <td><em>Actions:</em></td>
-<td><ol><li>Set Global Variables:</li><ul><li>eVar1, eVar2, eVar3, eVar8, eVar11, eVar20, eVar21, eVar25, eVar26, eVar30, eVar34, eVar36, eVar37, eVar38, eVar45, eVar47, eVar49, eVar64, eVar65, eVar66, eVar70, eVar90</li><li>prop1, prop2, prop4</li><li>event1, event13, event14</li><li>Page Name</li><li>Channel</li><li>Campaign</li></ul><li>Send Pageview beacon</li><li>Clear all Analytics variables</li><li>Make Direct Call &ldquo;loadProducts&rdquo; if the _satellite var &ldquo;loadProducts&rdquo; is true</li></ol></td>
+<td><ol><li>Set Global Variables:</li><ul><li>eVar1, eVar2, eVar3, eVar8, eVar11, eVar20, eVar21, eVar25, eVar26, eVar30, eVar34, eVar36, eVar37, eVar38, eVar45, eVar47, eVar49, eVar64, eVar65, eVar66, eVar70, eVar90</li><li>prop1, prop2, prop4</li><li>event1, event13, event14</li><li>Page Name</li><li>Channel</li><li>Campaign</li><li>Currency Code</li></ul><li>Send Pageview beacon</li><li>Clear all Analytics variables</li><li>Make Direct Call &ldquo;loadProducts&rdquo; if the _satellite var &ldquo;loadProducts&rdquo; is true</li></ol></td>
 </tr>
 <tr>
 <td><em>Data Elements:</em></td>
@@ -575,7 +581,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 </tr>
 <tr>
 <td><em>Conditions:</em></td>
-<td><code>LiveDomain is true</code> <br /> <code>Is Product listing</code></td>
+<td><code>LiveDomain is true</code> <br /> <code>Is Product Listing</code></td>
 </tr>
 <tr>
 <td><em>Actions:</em></td>
@@ -670,7 +676,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 </tr>
 <tr>
 <td><em>Conditions:</em></td>
-<td><code>LiveDomain is true</code> <br /> <code>Is ShoppingBag</code></td>
+<td><code>LiveDomain is true</code> <br /> <code>Is Shopping Cart</code></td>
 </tr>
 <tr>
 <td><em>Actions:</em></td>
@@ -726,7 +732,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 </tr>
 <tr>
 <td><em>Data Elements:</em></td>
-<td><ul class=twocolumns><li>CC: Adobe - Product String - Checkout</li><li>CC: isLiveDomain</li><li>CC: Page Name</li><li>CC: screen.type</li><li>scCheckouDone (\_satellite var)</li></ul></td>
+<td><ul class=twocolumns><li>CC: Adobe - Product String - Checkout</li><li>CC: isLiveDomain</li><li>CC: Page Name</li><li>CC: screen.type</li><li>scCheckoutDone (\_satellite var)</li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -835,7 +841,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <h3 id="toc_19"><a name="addtobag"></a>Global | AA - Product Detail Page: addToBag [GTM]</h3>
 
-<p>Set Add To Cart variable and send Link Track Event.</p>
+<p>Set Add To Cart variable and send Link Track Event on click in button <em>Add To Bag</em> of Products Detail Pages.</p>
 
 <table>
 <thead>
@@ -860,7 +866,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 </tr>
 <tr>
 <td><em>Actions:</em></td>
-<td><ol><li>Clear all Analytics variables</li><li>Set Add to Cart Variables:</li><ul><li>Page Name</li><li>Channel</li><li>eVar48, eVar102</li><li>Merchandising: eVar41, eVar42, eVar55, eVar56, eVar57, eVar58, eVar59, eVar60, eVar61 eVar102</li><li>scAdd, scOpen</ul><li>Send Link Tracking beacon</ol></td>
+<td><ol><li>Clear all Analytics variables</li><li>Set Add to Cart Variables:</li><ul><li>Page Name</li><li>Channel</li><li>eVar48, eVar102</li><li>Merchandising: eVar41, eVar42, eVar55, eVar56, eVar57, eVar58, eVar59, eVar60, eVar61 eVar102</li><li>scAdd, scOpen</ul><li>Send Link Tracking beacon:</li><ul><li>Custom Link: <strong>addToCart</strong></li></ul></ol></td>
 </tr>
 <tr>
 <td><em>Data Elements:</em></td>
@@ -873,7 +879,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <h3 id="toc_20"><a name="removefrombag"></a>Global | AA - Shopping Cart Pages: removeFromBag [GTM]</h3>
 
-<p>Set Add To Cart variable and send Link Track Event.</p>
+<p>Set Remove from Cart Cart variable and send Link Track Event on click in button <em>Remove</em> of Shopping Cart Pages.</p>
 
 <table>
 <thead>
@@ -898,7 +904,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 </tr>
 <tr>
 <td><em>Actions:</em></td>
-<td><ol><li>Clear all Analytics variables</li><li>Set Remove from Cart Variables:</li><ul><li>Page Name</li><li>Channel</li><li>Merchandising: eVar43</li><li>scRemove</ul><li>Send Link Tracking beacon</li></ol></td>
+<td><ol><li>Clear all Analytics variables</li><li>Set Remove from Cart Variables:</li><ul><li>Page Name</li><li>Channel</li><li>Merchandising: eVar43</li><li>scRemove</ul><li>Send Link Tracking beacon</li><ul><li>Custom Link: <strong>Remove From Cart</strong></li></ul></ol></td>
 </tr>
 <tr>
 <td><em>Data Elements:</em></td>
@@ -911,7 +917,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <h3 id="toc_21"><a name="productLoad"></a>Global | AA - Product and Search pages: productLoad</h3>
 
-<p>Set Add To Cart variable and send Link Track Event.</p>
+<p>Set Product List variables and send Link Track Event when more products than the product limit is sent with a pageview.</p>
 
 <table>
 <thead>
@@ -936,18 +942,226 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 </tr>
 <tr>
 <td><em>Actions:</em></td>
-<td><ol><li>eVar200</li><li>Merchandising: eVar41</li><li>Incrementor: event52</li><li>products</li></ol></td>
+<td><ol><li>Clear all Analytics variables</li><li>Set Product List Variables:</li><ul><li>eVar200</li><li>Merchandising: eVar41</li><li>Incrementor: event52</li><li>products</li></ul><li>Send Link Tracking beacon</li><ul><li>Custom Link: <strong>Products Load [Number of products]</strong></li></ul></ol></td>
 </tr>
 <tr>
 <td><em>Data Elements:</em></td>
-<td><ul class=twocolumns><li>CC: Adobe - Product Array - Products List</li><li>CC: Channel</li><li>CC: Page Name</li><li>CT: product_cap_limit</li><li>FUNC: getProducts</li><li>prodArray (satellite var)</li><li>prodStart (satellite var)</li></ul></td>
+<td><ul class=twocolumns><li>CC: Adobe - Product Array - Products List</li><li>CC: Channel</li><li>CT: isLiveDomain</li><li>CC: Page Name</li><li>CT: product_cap_limit</li><li>FUNC: getProducts</li><li>prodArray (satellite var)</li><li>prodStart (satellite var)</li></ul></td>
 </tr>
 </tbody>
 </table>
 
 <hr>
 
-<h2 id="toc_22">Data Elements</h2>
+<h3 id="toc_22"><a name="productLoad"></a>Global | AA - All Pages: Breadcrumb click</h3>
+
+<p>Set Breadcrumb variable and send Link Track Event when a link in the Breadcrumb is clicked.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>Event:</em></td>
+<td>Mousedown: <code>.breadcrumbs li a</code></td>
+</tr>
+<tr>
+<td><em>Rule order:</em></td>
+<td>50</td>
+</tr>
+<tr>
+<td><em>Conditions:</em></td>
+<td><code>LiveDomain is true</code></td>
+</tr>
+<tr>
+<td><em>Actions:</em></td>
+<td><ol><li>Clear all Analytics variables</li><li>Set Breadcrumb variable:</li><ul><li>eVar36</li><li>event41</li><li>Page Name</li><li>Channel</li></ul><li>Send Link Tracking beacon</li><ul><li>Custom Link: <strong>breadcrumb:click</strong></li></ul></ol></td>
+</tr>
+<tr>
+<td><em>Data Elements:</em></td>
+<td><ul class=twocolumns><li>CC: Channel</li><li>CT: isLiveDomain</li><li>CC: Page Name</li></ul></td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h3 id="toc_23"><a name="cartpopup"></a>Global | AA - All Pages : Cart Pop-Up</h3>
+
+<p>Set Breadcrumb variable and send Link Track Event when the Cart Pop-up is opened.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>Event:</em></td>
+<td>Mousedown: <code>.toggle-button-mini-basket .strudel-init</code></td>
+</tr>
+<tr>
+<td><em>Rule order:</em></td>
+<td>50</td>
+</tr>
+<tr>
+<td><em>Conditions:</em></td>
+<td><code>LiveDomain is true</code></td>
+</tr>
+<tr>
+<td><em>Actions:</em></td>
+<td><ol><li>Clear all Analytics variables</li><li>Set Cart Pop-up variable:</li><ul><li>Page Name</li><li>Channel</li></ul><li>Send Link Tracking beacon</li><ul><li>Custom Link: <strong>Cart Pop-Up</strong></li></ul></ol></td>
+</tr>
+<tr>
+<td><em>Data Elements:</em></td>
+<td><ul class=twocolumns><li>CC: Channel</li><li>CT: isLiveDomain</li><li>CC: Page Name</li></ul></td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h3 id="toc_24"><a name="continueshopping"></a>Global | AA - All Pages: Continue Shopping</h3>
+
+<p>Set Breadcrumb variable and send Link Track Event when the Cart Pop-up is opened.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>Event:</em></td>
+<td>Mousedown: <code>#continueShoppingLinkTop, #continueShoppingBottomLink, #continueShoppingLink</code></td>
+</tr>
+<tr>
+<td><em>Rule order:</em></td>
+<td>50</td>
+</tr>
+<tr>
+<td><em>Conditions:</em></td>
+<td><code>LiveDomain is true</code></td>
+</tr>
+<tr>
+<td><em>Actions:</em></td>
+<td><ol><li>Clear all Analytics variables</li><li>Set Continue Shopping variable:</li><ul><li>eVar70</li><li>event26</li><li>Page Name</li><li>Channel</li></ul><li>Send Link Tracking beacon</li><ul><li>Custom Link: <strong>continue:click</strong></li></ul></ol></td>
+</tr>
+<tr>
+<td><em>Data Elements:</em></td>
+<td><ul class=twocolumns><li>CC: Channel</li><li>CT: isLiveDomain</li><li>CC: Page Name</li><li>CC: screen.category.name</li><li>CC: screen.type</li></ul></td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h3 id="toc_25"><a name="colourfilter"></a>Global | AA - Product Detail Page: Colour Filter</h3>
+
+<p>Set Colour filter variable and send Link Track Event when the user changes the colour of a product on Product Detail Pages.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>Event:</em></td>
+<td>Mousedown: <code>#pdpBuyingPanel_ColorSwatches span</code></td>
+</tr>
+<tr>
+<td><em>Rule order:</em></td>
+<td>50</td>
+</tr>
+<tr>
+<td><em>Conditions:</em></td>
+<td><code>LiveDomain is true</code><br /><code>Is Product Detail</code></td>
+</tr>
+<tr>
+<td><em>Actions:</em></td>
+<td><ol><li>Clear all Analytics variables</li><li>Set Colour filters variable:</li><ul><li>eVar71</li><li>event26</li><li>Page Name</li><li>Channel</li></ul><li>Send Link Tracking beacon</li><ul><li>Custom Link: <strong>Colour Filter</strong></li></ul></ol></td>
+</tr>
+<tr>
+<td><em>Data Elements:</em></td>
+<td><ul class=twocolumns><li>CC: Channel</li><li>CT: isLiveDomain</li><li>CC: Page Name</li><li>CC: screen.type</li></ul></td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2 id="toc_26">Conditions</h2>
+
+<p>This is the description of the Rules conditions used in the Adobe Analytics implementation:</p>
+
+<table>
+<thead>
+<tr>
+<th>COndition</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>Is Checkout</em></td>
+<td><code>CC: screen.type</code> == <code>&quot;checkout&quot;</code></td>
+</tr>
+<tr>
+<td><em>Is Order Confirmation</em></td>
+<td><code>CC: screen.type</code> == <code>&quot;checkout-confirmation&quot; || &quot;checkout-complete-register&quot;</code></td>
+</tr>
+<tr>
+<td><em>Is Product Detail</em></td>
+<td><code>CC: screen.type</code> == <code>&quot;product-details&quot;</code></td>
+</tr>
+<tr>
+<td><em>Is Product Listing</em></td>
+<td><code>CC: screen.type</code> == <code>&quot;product-listing&quot;</code></td>
+</tr>
+<tr>
+<td><em>Is Search Page</em></td>
+<td><code>CC: screen.type</code> == <code>&quot;search&quot;</code> || <code>CC: Page Name</code> contains <code>&quot;search&quot;</code></td>
+</tr>
+<tr>
+<td><em>Is Shopping Cart</em></td>
+<td><code>CC: screen.type</code> == <code>&quot;shopping-bag&quot;</code></td>
+</tr>
+<tr>
+<td><em>LiveDomain is true</em></td>
+<td><code>CC: isLiveDomain</code> is <code>true</code></td>
+</tr>
+<tr>
+<td><em>Page Name matches contact|billing|payment</em></td>
+<td><code>CC: Page Name</code> matches Regex <code>/contact|billing|payment/</code></td>
+</tr>
+<tr>
+<td><em>transaction.id is not undefined</em></td>
+<td><code>CC: transaction.id</code> != <code>undefined</code></td>
+</tr>
+<tr>
+<td><em>404 Page</em></td>
+<td><code>PI: Page Title</code> starts with <code>404</code></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_27">Data Elements</h2>
 
 <p>This is the list of Data Elements used in the migration.
 For each variable is show its name, expected value, default value if expected value is not found, if the Data Element already existed or if it was created for the migration and Rules and other Data Elements dependencies.</p>
@@ -1180,6 +1394,13 @@ For each variable is show its name, expected value, default value if expected va
 <td>&ldquo;jpbodendevgtmp1&rdquo; <code>Str</code></td>
 <td>Yes</td>
 <td>CC: Platform Region</td>
+</tr>
+<tr>
+<td>CC: screen.category.name</td>
+<td>dataLayer screen.category.name <code>Str</code></td>
+<td>&ldquo;undefined&rdquo; <code>Str</code></td>
+<td>Yes</td>
+<td>-</td>
 </tr>
 <tr>
 <td>CC: screen.hierarchy</td>
