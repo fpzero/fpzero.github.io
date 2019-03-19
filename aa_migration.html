@@ -373,6 +373,7 @@ kbd {
 <li>For eVar45 (Core/Non-Core), Lee told me to get the value of dataLayer screen.hierarchy (core or clearance). If the page is not core nor clearance, the eVar must be empty or I pass some other value on it?</li>
 <li>What is expected for eVar48 (Length)? It has no value on Analytics</li>
 <li>evar50 was set in the old code (GTM), but it&rsquo;s not enabled in Analytics. It gest the same value of eVar17. Do I keep it in the current code?</li>
+<li>When eVar57 (Size (length-f)) and eVar58 (Size (waist/length-m)) must be sent?</li>
 <li>eVar101 and eVar102 are set on some tags in the current code. This seems to be for development/teste purpose and they are not enabled on Analytics. Do I keep these variables?</li>
 </ul>
 
@@ -401,9 +402,21 @@ kbd {
 <li>The page sets a global variable s that conflicts with Adobe global variable.</li>
 </ul>
 
-<h1 id="toc_9">The Basics</h1>
+<h5 id="toc_9">Shopping Bag</h5>
 
-<h2 id="toc_10">Page View Rules and Load Order</h2>
+<ul>
+<li>Several dataLayer events <code>product.interact.manual.click.removeFromBag</code> beign pushed into dataLayer when a product is removed</li>
+</ul>
+
+<h5 id="toc_10">CHeckout pages</h5>
+
+<ul>
+<li>screen.url is returning only page path, not entire URL</li>
+</ul>
+
+<h1 id="toc_11">The Basics</h1>
+
+<h2 id="toc_12">Page View Rules and Load Order</h2>
 
 <p>Adobe Analytics pageview requests are triggered by a <strong>Direct Call</strong> <code>dlReady</code> sent by GTM on <a href="https://tagmanager.google.com/#/container/accounts/1044779276/containers/6243354/workspaces/636/tags/399">this tag</a> and based on some dataLayer events.</p>
 
@@ -444,7 +457,7 @@ kbd {
 
 <p>In this way, if the user is in the Search page, the <code>dlReady</code> direct call will trigger first the <em>Global | AA - Search Page: dlReady [GTM]</em> and then it will trigger the <em>Global | AA - All Pages: dlReady [GTM]</em>.</p>
 
-<h2 id="toc_11">Event Rules</h2>
+<h2 id="toc_13">Event Rules</h2>
 
 <p>Event rules will be triggered by <strong>Direct Calls</strong> created inside Adobe Launch or based on the page and browser events. It won&rsquo;t rely on Order number and it will always have the default value 50.</p>
 
@@ -458,6 +471,8 @@ kbd {
 <li><a href="#signinbtn">Global | AA - All Pages: Sign In Button</a></li>
 <li><a href="#socialclick">Global | AA - All Pages: Social Clicks</a></li>
 <li><a href="#productload">Global | AA - Product and Search pages: productLoad</a></li>
+<li><a href="#filterclick">Global | AA - Product and Search pages: Filter click</a></li>
+<li><a href="#sortclick">Global | AA - Product and Search pages: Sort click</a></li>
 <li><a href="#addtobag">Global | AA - Product Detail Page: addToBag [GTM]</a></li>
 <li><a href="#colourfilter">Global | AA - Product Detail Page: Colour Filter</a></li>
 <li><a href="#sizeguide">Global | AA - Product Detail Page: Size guide</a></li>
@@ -466,11 +481,11 @@ kbd {
 <li><a href="#removefrombag">Global | AA - Shopping Cart Pages: removeFromBag [GTM]</a></li>
 </ul>
 
-<h1 id="toc_12">Extensions</h1>
+<h1 id="toc_14">Extensions</h1>
 
 <p>Here is listed the Extensions used in the migration and relevant information about each Extension.</p>
 
-<h3 id="toc_13">Adobe Analytics</h3>
+<h3 id="toc_15">Adobe Analytics</h3>
 
 <p>Extension used for Adobe Analytics calls. </p>
 
@@ -509,7 +524,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 </tbody>
 </table>
 
-<h3 id="toc_14">Experience Cloud ID Service</h3>
+<h3 id="toc_16">Experience Cloud ID Service</h3>
 
 <p>Extension used to enable Experience Cloud ID Service on the site</p>
 
@@ -529,15 +544,15 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 </tbody>
 </table>
 
-<h3 id="toc_15">Constant Data Element</h3>
+<h3 id="toc_17">Constant Data Element</h3>
 
 <p>Extension used to add the <em>Constant</em> option for <em>Data Elements</em></p>
 
-<h1 id="toc_16">Rules</h1>
+<h1 id="toc_18">Rules</h1>
 
-<h2 id="toc_17">Pageview Rules</h2>
+<h2 id="toc_19">Pageview Rules</h2>
 
-<h3 id="toc_18"><a name="all_pages_rule"></a>Global | AA - All Pages: dlReady [GTM]</h3>
+<h3 id="toc_20"><a name="all_pages_rule"></a>Global | AA - All Pages: dlReady [GTM]</h3>
 
 <p>Set global variables and events related to all pages and send the pageView beacon. This will always be the last <code>dlReady</code> rule to be triggered.</p>
 
@@ -583,7 +598,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h3 id="toc_19"><a name="search_pages_rule"></a>Global | AA - Search Page: dlReady [GTM]</h3>
+<h3 id="toc_21"><a name="search_pages_rule"></a>Global | AA - Search Page: dlReady [GTM]</h3>
 
 <p>Set variables for Internal Search pages.</p>
 
@@ -631,7 +646,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h3 id="toc_20"><a name="prodList_pages_rule"></a>Global | AA - Product Listing Page: dlReady [GTM]</h3>
+<h3 id="toc_22"><a name="prodList_pages_rule"></a>Global | AA - Product Listing Page: dlReady [GTM]</h3>
 
 <p>Set variables for Products Listing pages.</p>
 
@@ -679,7 +694,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h3 id="toc_21"><a name="prodDetail_pages_rule"></a>Global | AA - Product Detail Page: dlReady [GTM]</h3>
+<h3 id="toc_23"><a name="prodDetail_pages_rule"></a>Global | AA - Product Detail Page: dlReady [GTM]</h3>
 
 <p>Set variables for all Product Detail pages.</p>
 
@@ -726,7 +741,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h3 id="toc_22"><a name="shoppingCart_pages_rule"></a>Global | AA - Shopping Cart page: dlReady [GTM]</h3>
+<h3 id="toc_24"><a name="shoppingCart_pages_rule"></a>Global | AA - Shopping Cart page: dlReady [GTM]</h3>
 
 <p>Set variables for the Shopping Cart page.</p>
 
@@ -774,7 +789,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h3 id="toc_23"><a name="checkout_pages_rule"></a>Global | AA - Checkout pages: dlReady [GTM]</h3>
+<h3 id="toc_25"><a name="checkout_pages_rule"></a>Global | AA - Checkout pages: dlReady [GTM]</h3>
 
 <p>Set variables for the Checkout steps page.</p>
 
@@ -823,7 +838,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h3 id="toc_24"><a name="order_pages_rule"></a>Global | AA - Order confirmation: dlReady [GTM]</h3>
+<h3 id="toc_26"><a name="order_pages_rule"></a>Global | AA - Order confirmation: dlReady [GTM]</h3>
 
 <p>Set variables for the Order Confirmation page.</p>
 
@@ -872,7 +887,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h3 id="toc_25"><a name="error_pages_rule"></a>Global | AA - Error Pages: dlReady [GTM]</h3>
+<h3 id="toc_27"><a name="error_pages_rule"></a>Global | AA - Error Pages: dlReady [GTM]</h3>
 
 <p>Set variables for the Error pages.</p>
 
@@ -910,9 +925,9 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h2 id="toc_26">Link Tracking Rules</h2>
+<h2 id="toc_28">Link Tracking Rules</h2>
 
-<h3 id="toc_27"><a name="addtobag"></a>Global | AA - Product Detail Page: addToBag [GTM]</h3>
+<h3 id="toc_29"><a name="addtobag"></a>Global | AA - Product Detail Page: addToBag [GTM]</h3>
 
 <p>Set Add To Cart variable and send Link Track Event on click in button <em>Add To Bag</em> of Products Detail Pages.</p>
 
@@ -950,7 +965,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h3 id="toc_28"><a name="removefrombag"></a>Global | AA - Shopping Cart Pages: removeFromBag [GTM]</h3>
+<h3 id="toc_30"><a name="removefrombag"></a>Global | AA - Shopping Cart Pages: removeFromBag [GTM]</h3>
 
 <p>Set Remove from Cart Cart variable and send Link Track Event on click in button <em>Remove</em> of Shopping Cart Pages.</p>
 
@@ -988,7 +1003,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h3 id="toc_29"><a name="productLoad"></a>Global | AA - Product and Search pages: productLoad</h3>
+<h3 id="toc_31"><a name="productload"></a>Global | AA - Product and Search pages: productLoad</h3>
 
 <p>Set Product List variables and send Link Track Event when more products than the product limit is sent with a pageview.</p>
 
@@ -1003,7 +1018,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 <tbody>
 <tr>
 <td><em>Event:</em></td>
-<td>Direct Call: <code>loadProducts</code></td>
+<td>Direct Call: <code>loadProducts</code><br />Data Layer Push: <code>product.load.auto.dataLayer.load</code></td>
 </tr>
 <tr>
 <td><em>Rule order:</em></td>
@@ -1026,7 +1041,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h3 id="toc_30"><a name="productLoad"></a>Global | AA - All Pages: Breadcrumb click</h3>
+<h3 id="toc_32"><a name="productLoad"></a>Global | AA - All Pages: Breadcrumb click</h3>
 
 <p>Set Breadcrumb variable and send Link Track Event when a link in the Breadcrumb is clicked.</p>
 
@@ -1064,7 +1079,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h3 id="toc_31"><a name="cartpopup"></a>Global | AA - All Pages : Cart Pop-Up</h3>
+<h3 id="toc_33"><a name="cartpopup"></a>Global | AA - All Pages : Cart Pop-Up</h3>
 
 <p>Set Breadcrumb variable and send Link Track Event when the Cart Pop-up is opened.</p>
 
@@ -1102,7 +1117,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h3 id="toc_32"><a name="continueshopping"></a>Global | AA - All Pages: Continue Shopping</h3>
+<h3 id="toc_34"><a name="continueshopping"></a>Global | AA - All Pages: Continue Shopping</h3>
 
 <p>Set Breadcrumb variable and send Link Track Event when the link Continue Shopping is clicked.</p>
 
@@ -1140,7 +1155,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h3 id="toc_33"><a name="colourfilter"></a>Global | AA - Product Detail Page: Colour Filter</h3>
+<h3 id="toc_35"><a name="colourfilter"></a>Global | AA - Product Detail Page: Colour Filter</h3>
 
 <p>Set Colour filter variable and send Link Track Event when the user changes the colour of a product on Product Detail Pages.</p>
 
@@ -1155,7 +1170,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 <tbody>
 <tr>
 <td><em>Event:</em></td>
-<td>Mousedown: <code>#pdpBuyingPanel_ColorSwatches span</code></td>
+<td>Mousedown: <code>#pdpBuyingPanel_ColorSwatches a</code></td>
 </tr>
 <tr>
 <td><em>Rule order:</em></td>
@@ -1178,7 +1193,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h3 id="toc_34"><a name="flagclick"></a>Global | All Pages: Flag Click</h3>
+<h3 id="toc_36"><a name="flagclick"></a>Global | All Pages: Flag Click</h3>
 
 <p>Set Flag Clicks variable and send Link Track Event when a flag link is clicked in the bottom of the page.</p>
 
@@ -1216,7 +1231,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h3 id="toc_35"><a name="footerlinks"></a>Global | AA - All Pages: Footer Links</h3>
+<h3 id="toc_37"><a name="footerlinks"></a>Global | AA - All Pages: Footer Links</h3>
 
 <p>Set Footer Links variable and send Link Track Event when a footer link is clicked.</p>
 
@@ -1254,7 +1269,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h3 id="toc_36"><a name="livechat"></a>Global | AA - All Pages: Live Chat</h3>
+<h3 id="toc_38"><a name="livechat"></a>Global | AA - All Pages: Live Chat</h3>
 
 <p>Set Live chat variable and send Link Track Event when Live chat is clicked.</p>
 
@@ -1292,7 +1307,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h3 id="toc_37"><a name="logoclick"></a>Global | AA - All Pages: Logo Click</h3>
+<h3 id="toc_39"><a name="logoclick"></a>Global | AA - All Pages: Logo Click</h3>
 
 <p>Set Logo Click variable and send Link Track Event when the site logo is clicked.</p>
 
@@ -1330,7 +1345,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h3 id="toc_38"><a name="signinbtn"></a>Global | AA - All Pages: Sign In Button</h3>
+<h3 id="toc_40"><a name="signinbtn"></a>Global | AA - All Pages: Sign In Button</h3>
 
 <p>Set Sign In variable and send Link Track Event when the Sign In Buttons is clicked.</p>
 
@@ -1368,7 +1383,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h3 id="toc_39"><a name="sizeguide"></a>Global | AA - Product Detail Page: Size guide</h3>
+<h3 id="toc_41"><a name="sizeguide"></a>Global | AA - Product Detail Page: Size guide</h3>
 
 <p>Set Size Guide variable and send Link Track Event when Size Guide link is clicked on Product Detail Pages.</p>
 
@@ -1406,7 +1421,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h3 id="toc_40"><a name="socialclick"></a>Global | AA - All Pages: Social Clicks</h3>
+<h3 id="toc_42"><a name="socialclick"></a>Global | AA - All Pages: Social Clicks</h3>
 
 <p>Set Social clicks variable and send Link Track Event when a Social link is clicked.</p>
 
@@ -1444,7 +1459,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h3 id="toc_41"><a name="tabclick"></a>Global | AA - Product Detail Page: Tab Click</h3>
+<h3 id="toc_43"><a name="tabclick"></a>Global | AA - Product Detail Page: Tab Click</h3>
 
 <p>Set Social clicks variable and send Link Track Event when a tab is opened or closed in a Product Detail Page.</p>
 
@@ -1482,7 +1497,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h3 id="toc_42"><a name="writeareview"></a>Global | AA - Product Detail Page: Write a Review</h3>
+<h3 id="toc_44"><a name="writeareview"></a>Global | AA - Product Detail Page: Write a Review</h3>
 
 <p>Set Social clicks variable and send Link Track Event when the Write a Review link is clicked  in a Product Detail Page.</p>
 
@@ -1520,7 +1535,83 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 
 <hr>
 
-<h2 id="toc_43">Conditions</h2>
+<h3 id="toc_45"><a name="filterclick"></a>Global | AA - Product and Search pages: Filter click</h3>
+
+<p>Set Filter variables and send Link Track Event when a filter is changed on Search or Product List Pages.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>Event:</em></td>
+<td>Data Layer Push: <code>load.manual.apply.filter</code></td>
+</tr>
+<tr>
+<td><em>Rule order:</em></td>
+<td>50</td>
+</tr>
+<tr>
+<td><em>Conditions:</em></td>
+<td><code>LiveDomain is true</code><br /><code>Is Search or Product List</code></td>
+</tr>
+<tr>
+<td><em>Actions:</em></td>
+<td><ol><li>Clear all Analytics variables</li><li>Set Sign In variable:</li><ul><li>prop14</li><li>event36</li><li>Page Name</li><li>Channel</li></ul><li>Send Link Tracking beacon</li><ul><li>Custom Link: <strong>Filter-click</strong></li></ul></ol></td>
+</tr>
+<tr>
+<td><em>Data Elements:</em></td>
+<td><ul class=twocolumns><li>CC: Channel</li><li>CC: Filter Usage</li><li>CT: isLiveDomain</li><li>CC: Page Name</li><li>CC: screen.type</li></ul></td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h3 id="toc_46"><a name="sortclick"></a>Global | AA - Product and Search pages: Sort click</h3>
+
+<p>Set Sort variables and send Link Track Event when the product order is sorted on Search or Product List Pages.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><em>Event:</em></td>
+<td>Data Layer Push: <code>load.manual.apply.sort</code></td>
+</tr>
+<tr>
+<td><em>Rule order:</em></td>
+<td>50</td>
+</tr>
+<tr>
+<td><em>Conditions:</em></td>
+<td><code>LiveDomain is true</code><br /><code>Is Search or Product List</code></td>
+</tr>
+<tr>
+<td><em>Actions:</em></td>
+<td><ol><li>Clear all Analytics variables</li><li>Set Sign In variable:</li><ul><li>prop32</li><li>event55</li><li>Page Name</li><li>Channel</li></ul><li>Send Link Tracking beacon</li><ul><li>Custom Link: <strong>Sort-click</strong></li></ul></ol></td>
+</tr>
+<tr>
+<td><em>Data Elements:</em></td>
+<td><ul class=twocolumns><li>CC: Channel</li><li>CC: Filter Usage</li><li>CT: isLiveDomain</li><li>CC: Page Name</li><li>CC: screen.type</li></ul></td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2 id="toc_47">Conditions</h2>
 
 <p>This is the description of the Rules conditions used in the Adobe Analytics implementation:</p>
 
@@ -1554,6 +1645,10 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 <td><code>CC: screen.type</code> == <code>&quot;search&quot;</code> || <code>CC: Page Name</code> contains <code>&quot;search&quot;</code></td>
 </tr>
 <tr>
+<td><em>Is Search or Product List</em></td>
+<td><code>CC: screen.type</code> == <code>&quot;product-listing&quot;</code> || <code>CC: screen.type</code> == <code>&quot;search&quot;</code> || <code>CC: Page Name</code> contains <code>&quot;search&quot;</code></td>
+</tr>
+<tr>
 <td><em>Is Shopping Cart</em></td>
 <td><code>CC: screen.type</code> == <code>&quot;shopping-bag&quot;</code></td>
 </tr>
@@ -1576,7 +1671,7 @@ No <em>eVar</em> or <em>prop</em> is set to ensure the request will have the mos
 </tbody>
 </table>
 
-<h2 id="toc_44">Data Elements</h2>
+<h2 id="toc_48">Data Elements</h2>
 
 <p>This is the list of Data Elements used in the migration.
 For each variable is show its name, expected value, default value if expected value is not found, if the Data Element already existed or if it was created for the migration and Rules and other Data Elements dependencies.</p>
