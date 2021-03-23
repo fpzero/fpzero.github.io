@@ -1,24 +1,6 @@
 //tealium universal tag - utag.sync ut4.0.202101280409, Copyright 2021 Tealium.com Inc. All Rights Reserved.
 try {
-    function readCONSENTMGRCookie(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(";");
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i].trim();
-            if (c.indexOf(nameEQ) == 0) {
-                var result = {};
-                var list = c.substring(nameEQ.length, c.length).split("%7C");
-                for (var pos = 0; pos < list.length; pos++) {
-                    var item = list[pos];
-                    var key = item.substring(0, item.indexOf(":"));
-                    result[key] = item.substring(item.indexOf(":") + 1, item.length);
-                }
-                return result;
-            }
-        }
-        return null;
-    }
-
+    
         try {
             var e = function() {
                 "use strict";
@@ -2320,7 +2302,6 @@ try {
                     return {
                         screenHeight: screen.height,
                         screenWidth: screen.width,
-                        cookie_consent: window.localStorage.getItem("amp-store:https://www.comparethemarket.com") ? true : false,
                         at_property: setTargetProperty(),
                     };
                 };
