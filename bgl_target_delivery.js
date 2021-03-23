@@ -18,7 +18,7 @@ try {
         }
         return null;
     }
-    if ((readCONSENTMGRCookie("CONSENTMGR") && readCONSENTMGRCookie("CONSENTMGR").c3 && readCONSENTMGRCookie("CONSENTMGR").c3 === "1") || (readCONSENTMGRCookie("CONSENTMGR") && !readCONSENTMGRCookie("CONSENTMGR").c3 && readCONSENTMGRCookie("CONSENTMGR").consent === "true")) {
+
         try {
             var e = function() {
                 "use strict";
@@ -7845,7 +7845,6 @@ try {
         } catch (e) {
             new Error("Adobe Target tag error: " + e);
         }
-    }
 } catch (e) {
     new Error("Tealium sync tag error: " + e);
 }
