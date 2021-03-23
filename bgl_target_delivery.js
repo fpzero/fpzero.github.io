@@ -2310,54 +2310,11 @@ try {
                 bodyHidingEnabled: true,
             };
             try {
-                var atLoadRules = {
-                    bike: {
-                        regex: /bike-|-bike/i,
-                        propertyId: "7ee76dfd-88a8-f2e3-f167-e52d5d3281ba",
-                    },
-                    car: {
-                        regex: /car-|-car/i,
-                        propertyId: "d040542f-d3f9-ba52-f25c-dc7a088fb6d6",
-                    },
-                    energy: {
-                        regex: /energy-?|-energy/i,
-                        propertyId: "2eca714f-d9f1-a9f6-3b3d-81ea38d60250",
-                    },
-                    home: {
-                        regex: /^home-/i,
-                        propertyId: "ee9e8e31-354c-19f2-2fb9-d432787412ce",
-                    },
-                    life: {
-                        regex: /life-|-life/i,
-                        propertyId: "826609f6-9f06-c6dc-8bf4-09e956ad59b0",
-                    },
-                    mit: {
-                        regex: /(www|local\.sparkles)\.comparethemarket\.com|episerver-web(.*)ctmers\.io/i,
-                        propertyId: "e25d8c20-5ede-fe71-cad7-fc1d8e0e321b",
-                    },
-                    myctm: {
-                        regex: /^myctm|customer-account/,
-                        propertyId: "b0f32794-b5a8-15d8-c85c-ef235dd79e1f",
-                    },
-                    pet: {
-                        regex: /pet-|-pet/i,
-                        propertyId: "cc1f5ff7-8bd0-4b65-fc1e-106907a05e1f",
-                    },
-                    travel: {
-                        regex: /travel-|-travel/i,
-                        propertyId: "b7fa0411-7c9c-7712-4dbe-ca4cb7ec8bfa",
-                    },
-                    van: {
-                        regex: /van-|-van/i,
-                        propertyId: "b6a8dc86-c06a-a743-11c2-e22bf613b8f5",
-                    },
-                };
+
                 var setTargetProperty = function() {
-                    for (var rule in atLoadRules) {
-                        if (atLoadRules[rule].regex.test(window.location.hostname)) {
-                            return atLoadRules[rule].propertyId;
-                        }
-                    }
+
+                            return "87eaeddc-79fd-bbec-46ed-d3da4b3715dd";
+
                 };
                 window.targetPageParamsAll = function() {
                     return {
@@ -7844,7 +7801,6 @@ try {
             });
         } catch (e) {
             new Error("Adobe Target tag error: " + e);
-        }
-} catch (e) {
+        }} catch (e) {
     new Error("Tealium sync tag error: " + e);
 }
