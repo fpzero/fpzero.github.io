@@ -42,13 +42,14 @@
               }
             ]
           }
-        ]
+        ],
+        "useResourceQuotas": true
       }
     }).then(displayResults, console.error.bind(console));
   }
 
   function displayResults(response) {
-    console.log('l teste')
+    console.log('2 teste')
     var formattedJson = JSON.stringify(response, null, 2);
     document.getElementById('query-output').value = formattedJson;
   }
