@@ -48,7 +48,7 @@
   }
 
   function displayResults(response) {
-    var formattedJson = JSON.stringify(response.result, null, 2);
+    var formattedJson = JSON.stringify(response, null, 2);
     document.getElementById('query-output').value = formattedJson;
   }
 </script>
